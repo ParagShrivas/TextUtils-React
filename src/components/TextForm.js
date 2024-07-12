@@ -42,13 +42,14 @@ export default function TextForm(props) {
                 <div className="mb-3">
                     <textarea className={`form-control text-${props.mode === 'light' ? 'dark' : 'light'}`} style={{ backgroundColor: props.mode === 'dark' ? 'grey' : 'white' }} value={text} onChange={ChangeText} id="myBox" rows="6"></textarea>
                 </div>
-                <button className='btn btn-primary mx-1' onClick={ToUpperCase} id='btn-toUp'>Convert to UpperCase</button>
-                <button className='btn btn-primary mx-1' onClick={ToLowerCase} id='btn-toLo'>Convert to LowerCase</button>
-                <button className='btn btn-primary mx-1' onClick={Clear} id='btn-Clr'>Clear</button>
-                <button className='btn btn-primary mx-1' onClick={copyBtn} id='btn-Copy'>Copy</button>
+                <button className='btn btn-primary mx-1 my-1' onClick={ToUpperCase} id='btn-toUp'>Convert to UpperCase</button>
+                <button className='btn btn-primary mx-1 my-1' onClick={ToLowerCase} id='btn-toLo'>Convert to LowerCase</button>
+                <button className='btn btn-primary mx-1 my-1' onClick={Clear} id='btn-Clr'>Clear</button>
+                <button className='btn btn-primary mx-1 my-1' onClick={copyBtn} id='btn-Copy'>Copy</button>
             </div>
             <div className={`container text-${props.mode === 'light' ? 'dark' : 'light'}`}>
-                <p>{text.split(' ').length - 1} words {text.length} characters</p>
+                <p>{text.split(' ').filter((element) => element.length !== 0 ).length}
+                     words {text.length} characters</p>
                 <p>{0.008 * text.split(' ').length} Minutes need to read</p>
                 <h2>Preview</h2>
                 <p>{text.length > 0 ? text : "Enter something in the text box to preview here..."}</p>

@@ -1,19 +1,26 @@
 import React from 'react'
 
-export default function About() {
+export default function About(props) {
+
+  let myStyle = {
+    color: props.mode === 'dark' ? 'white' : 'black',
+    backgroundColor: props.mode === 'dark' ? '#042743' : 'white'
+  }
   return (
-    <section className="py-3 py-md-5">
+    <section className="py-3 py-md-5" style={myStyle}>
       <div className="container">
         <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
           <div className="col-12 col-lg-6 col-xl-5">
-            <img className="img-fluid rounded" loading="lazy" src="./about.avif" alt="About 1" />
+            <img className="img-fluid rounded" loading="lazy" src="./about.png" alt="About 1" />
           </div>
           <div className="col-12 col-lg-6 col-xl-7">
             <div className="row justify-content-xl-center">
               <div className="col-12 col-xl-11">
                 <h2 className="mb-3">Who Are We?</h2>
-                <p className="lead fs-4 text-secondary mb-3">We help people to build incredible brands and superior products. Our perspective is to furnish outstanding captivating services.</p>
-                <p className="mb-5">We are a fast-growing company, but we have never lost sight of our core values. We believe in collaboration, innovation, and customer satisfaction. We are always looking for new ways to improve our products and services.</p>
+                <p className="lead fs-4 text-secondary mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam fuga voluptate eius non omnis culpa!
+                </p>
+                <p className="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam fuga voluptate eius non omnis culpa!
+                </p>
                 <div className="row gy-4 gy-md-0 gx-xxl-5X">
                   <div className="col-12 col-md-6">
                     <div className="d-flex">
@@ -24,7 +31,8 @@ export default function About() {
                       </div>
                       <div>
                         <h2 className="h4 mb-3">Versatile Brand</h2>
-                        <p className="text-secondary mb-0">We are crafting a digital method that subsists life across all mediums.</p>
+                        <p className="text-secondary mb-0">    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam fuga voluptate eius non omnis culpa!
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -36,8 +44,9 @@ export default function About() {
                         </svg>
                       </div>
                       <div>
-                        <h2 className="h4 mb-3">Digital Agency</h2>
-                        <p className="text-secondary mb-0">We believe in innovation by merging primary with elaborate ideas.</p>
+                        <h2 className="h4 mb-3">Growth</h2>
+                        <p className="text-secondary mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam fuga voluptate eius non omnis culpa!
+                        </p>
                       </div>
                     </div>
                   </div>
