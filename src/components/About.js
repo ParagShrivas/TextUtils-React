@@ -11,7 +11,7 @@ export default function About(props) {
       <div className="container">
         <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
           <div className="col-12 col-lg-6 col-xl-5">
-            <img className="img-fluid rounded" loading="lazy" src="./about.png" alt="About 1" />
+            <img className="img-fluid rounded" loading="lazy" src={`${process.env.PUBLIC_URL}/about_img.png`} alt="About 1" />
           </div>
           <div className="col-12 col-lg-6 col-xl-7">
             <div className="row justify-content-xl-center">
